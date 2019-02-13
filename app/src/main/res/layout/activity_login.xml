@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".Registro">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/topo_cadastro" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_login"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="388dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="182dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="11dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="93dp"
+                        android:layout_height="82dp"
+                        android:layout_gravity="right"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/espaco_imagem" />
+
+                    <ImageView
+                        android:layout_width="99dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/foto_photo" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="123dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="1dp"
+                    android:src="@drawable/nome_completo" />
+
+                <EditText
+
+                    android:id="@+id/nome_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/color_edittext_login"
+                    android:fontFamily="@font/nunito_sans_extralight"
+                    android:hint="Nome"
+                    android:inputType="text"
+                    android:padding="10sp"
+                    android:singleLine="true"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="14dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/email_registro" />
+
+                <EditText
+
+                    android:id="@+id/email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/color_edittext_login"
+                    android:fontFamily="@font/nunito_sans_extralight"
+                    android:hint="E-mail"
+                    android:inputType="textEmailAddress"
+                    android:padding="10sp"
+                    android:singleLine="true"
+                    android:textSize="10sp" />
+
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="23dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/eusou" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/id_palestrante"
+                        android:layout_width="160dp"
+                        android:layout_height="44dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/palestrante" />
+
+                    <Button
+                        android:id="@+id/id_participante"
+                        android:layout_width="157dp"
+                        android:layout_height="44dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/participante" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="32dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/mini_curriculo" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_curriculo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:padding="10dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@android:color/darker_gray"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linear_curriculo_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/nome_profissional_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/color_editext_curriculo"
+                            android:fontFamily="@font/nunito_sans_extralight"
+                            android:gravity="center"
+                            android:hint="Nome Profissional"
+                            android:inputType="textEmailAddress"
+                            android:padding="10sp"
+                            android:singleLine="true"
+                            android:textColor="#1d1d1d"
+                            android:textSize="13sp" />
+
+                        <EditText
+                            android:id="@+id/formacao_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/color_editext_curriculo"
+                            android:fontFamily="@font/nunito_sans_extralight"
+                            android:gravity="center"
+                            android:hint="Formação Acadêmica"
+                            android:inputType="textEmailAddress"
+                            android:padding="10sp"
+                            android:singleLine="true"
+                            android:textColor="#1d1d1d"
+                            android:textSize="13sp" />
+
+                        <EditText
+                            android:id="@+id/nacionalidade_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/color_editext_curriculo"
+                            android:fontFamily="@font/nunito_sans_extralight"
+                            android:gravity="center"
+                            android:hint="Nacionalidade"
+                            android:inputType="textEmailAddress"
+                            android:padding="10sp"
+                            android:singleLine="true"
+                            android:textColor="#1d1d1d"
+                            android:textSize="13sp" />
+
+                        <EditText
+                            android:id="@+id/complementares_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/color_editext_curriculo"
+                            android:fontFamily="@font/nunito_sans_extralight"
+                            android:gravity="center"
+                            android:hint="Informações Complementares"
+                            android:inputType="textEmailAddress"
+                            android:padding="10sp"
+                            android:singleLine="false"
+                            android:textColor="#1d1d1d"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/gerar_qr"
+        android:gravity="bottom" />
+</LinearLayout>

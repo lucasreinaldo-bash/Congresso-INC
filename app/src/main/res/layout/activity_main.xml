@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+
+    tools:context=".Registro">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/topo_qr" />
+
+
+    <ImageView
+        android:id="@+id/id_qr"
+        android:layout_width="match_parent"
+        android:layout_height="177dp"
+        android:layout_above="@+id/imageView3"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="-17dp"
+        app:srcCompat="@drawable/qr_code_img" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="195dp"
+        android:layout_height="151dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="109dp"
+        app:srcCompat="@drawable/frase_usar_codigo" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="156dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="61dp"
+        android:background="@drawable/btn_editar_perfil_selector" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="34dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:layout_marginTop="11dp"
+        app:srcCompat="@drawable/espaco_imagem" />
+</RelativeLayout>
