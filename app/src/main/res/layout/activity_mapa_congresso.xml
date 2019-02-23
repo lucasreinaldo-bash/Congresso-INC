@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".Splash">
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="323dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+    </com.github.barteksc.pdfviewer.PDFView>
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="111dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/img_topo_mapa_congresso" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="91dp"
+        android:layout_height="58dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/img_mapa_congresso" />
+
+    <Button
+        android:id="@+id/btn_voltar_mapa_congresso"
+        android:layout_width="29dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/img_seta_voltar" />
+    </RelativeLayout>

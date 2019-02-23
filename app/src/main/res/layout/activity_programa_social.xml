@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".Splash">
+
+
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="111dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/img_topo_programa_social" />
+
+    <ImageView
+        android:id="@+id/id_nw"
+        android:layout_width="327dp"
+        android:layout_height="162dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="@drawable/img_nw7_travel" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="298dp"
+
+        android:layout_above="@+id/id_nw"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/img_dia27" />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#D3D4D5"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nadaaaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="false"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_toEndOf="@+id/profile_image"
+                            android:fontFamily="@font/nunito_semi_bold"
+                            android:textStyle="bold"
+                            android:gravity="left"
+                            android:text="Coquetel de Abertura - 21:00 - 23:00 "
+                            android:textColor="#21974E"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/nadaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="false"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+
+                            android:layout_toEndOf="@+id/profile_image"
+                            android:fontFamily="@font/nunito_semi_bold"
+                            android:gravity="left"
+                            android:text="Cocktail Opening Hotel Bourboun "
+                            android:textColor="#1d1d1d"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/nadaaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_nome"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/profile_image"
+
+                            android:gravity="left"
+                            android:text="Incluso na inscrição Congressista e Acompanhante Included in Registration Attendee and Companion"
+                            android:textColor="#1d1d1d"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/img_dia28" />
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#D3D4D5"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nadaaaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="false"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_toEndOf="@+id/profile_image"
+                            android:fontFamily="@font/nunito_semi_bold"
+                            android:gravity="left"
+                            android:text="Tour 1: Cataratas do Iguaçu e Almoço 9:30 - 14:00"
+                            android:textColor="#1d1d1d"
+                            android:textSize="16sp" />
+
+
+                        <TextView
+                            android:id="@+id/nadaaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_nome"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/profile_image"
+
+                            android:gravity="left"
+                            android:text="Iguassu Falls and Lunch
+R$ 165 Brasileiro / R$ 191 Estrangeiro / R$ 179 Mercosul\n
+R$ 165 Brazilian / R$ 191 Foreign / R$ 179 Mercosul\n
+Nesse valor estão Inclusos: translado ida e volta + ingresso do passeio + almoço
+\nFree including: round trip transfer + admission ticket + lunch "
+                            android:textColor="#1d1d1d"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/nadaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="false"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+
+                            android:layout_toEndOf="@+id/profile_image"
+                            android:fontFamily="@font/nunito_semi_bold"
+                            android:gravity="left"
+                            android:text="Night Tour 1 - By Night Argentina - 19:00 - 23:30"
+                            android:textColor="#1d1d1d"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/nadaaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_nome"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/profile_image"
+
+                            android:gravity="left"
+                            android:text="Passeio para desfrutar a noite Argentina, com paradas: no Duty Free Shop (Argentina)
++ comércio argentino + parada no restaurante El Quincho Del Tio Querido (jantar-não incluso)\n
+Ride to enjoy the Argentine night, with stops: in the Duty Free Shop (Argentina) + Argentine trade + Dinner at the restaurant El Quincho Del Tio Querido (dinner not included)
+R$ 50,00
+Nesse valor estão Inclusos: translado ida e volta
+Free including: round trip transfer "
+                            android:textColor="#1d1d1d"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/nadaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="false"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+
+                            android:layout_toEndOf="@+id/profile_image"
+                            android:fontFamily="@font/nunito_semi_bold"
+                            android:gravity="left"
+                            android:text="Night Tour 2 - Churrascaria Rafain Show"
+                            android:textColor="#1d1d1d"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/nadaaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_nome"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/profile_image"
+
+                            android:gravity="left"
+                            android:text="R$ 162,00
+Nesse valor estão Inclusos: translado ida e volta + jantar + show (bebidas não inclusas)\n
+Free including: round trip transfer  + dinner + show (drinks not included) "
+                            android:textColor="#1d1d1d"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/img_dia29" />
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nadaaaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="false"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_toEndOf="@+id/profile_image"
+                            android:fontFamily="@font/nunito_semi_bold"
+                            android:gravity="left"
+                            android:text="Tour 2:  Cataratas do Iguaçu e Almoço 9:30 - 14:00 "
+                            android:textColor="#1d1d1d"
+                            android:textSize="16sp" />
+
+
+                        <TextView
+                            android:id="@+id/nadaaaaa"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_nome"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/profile_image"
+
+                            android:gravity="left"
+                            android:text="Iguassu Falls and Lunch
+R$ 165 Brasileiro / R$ 191 Estrangeiro / R$ 179 Mercosul
+R$ 165 Brazilian / R$ 191 Foreign / R$ 179 Mercosul\n
+Nesse valor estão Inclusos: translado ida e volta + ingresso do passeio + almoço
+Free including: round trip transfer + admission ticket + lunch "
+                            android:textColor="#1d1d1d"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/nadaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="false"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+
+                            android:layout_toEndOf="@+id/profile_image"
+                            android:fontFamily="@font/nunito_semi_bold"
+                            android:gravity="left"
+                            android:text="Tour 3:  Passeio Panorâmico em Itaipu 9:30 - 12:00 "
+                            android:textColor="#1d1d1d"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/nadaaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_nome"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/profile_image"
+
+                            android:gravity="left"
+                            android:text="Panoramic Tour at Itaipu
+R$ 90,00 - almoço não-incluso / lunch not includedzn
+Nesse valor estão Inclusos: translado ida e volta + ingresso do passeiozn
+\nFree including: round trip transfer + admission ticket "
+                            android:textColor="#1d1d1d"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/nadaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="false"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+
+                            android:layout_toEndOf="@+id/profile_image"
+                            android:fontFamily="@font/nunito_semi_bold"
+                            android:gravity="left"
+                            android:text="Tour 4: Compras no Duty Free 15:00 - 17:00"
+                            android:textColor="#1d1d1d"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/nadaaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_nome"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/profile_image"
+
+                            android:gravity="left"
+                            android:text="Shopping time at Duty Free
+                            R$ 30,00\n
+Nesse valor estão Inclusos: translado ida e volta
+\nFree including: round trip transfer "
+                            android:textColor="#1d1d1d"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/img_dia30" />
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#D3D4D5"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nadaaaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="false"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_toEndOf="@+id/profile_image"
+                            android:fontFamily="@font/nunito_semi_bold"
+                            android:gravity="left"
+                            android:text="Tour 5: Parque das Aves 9:30 - 11:30"
+                            android:textColor="#1d1d1d"
+                            android:textSize="16sp" />
+
+
+                        <TextView
+                            android:id="@+id/nadaaaaa"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_nome"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/profile_image"
+
+                            android:gravity="left"
+                            android:text="crianças até 8 anos não pagam
+Birds Park - children under 8 years do not pay
+\nR$ 97,00
+Nesse valor estão Inclusos: translado ida e volta + ingresso do passeio\n
+Free including: round trip transfer + admission ticket "
+                            android:textColor="#1d1d1d"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/nadaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="false"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+
+                            android:layout_toEndOf="@+id/profile_image"
+                            android:fontFamily="@font/nunito_semi_bold"
+                            android:gravity="left"
+                            android:text="Tour 6: Compras e almoço Paraguai  9:00 - 13:00 "
+                            android:textColor="#1d1d1d"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/nadaaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_nome"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/profile_image"
+
+                            android:gravity="left"
+                            android:text="Shopping and Lunch time at Paraguay
+R$ 50,00
+Nesse valor estão Inclusos: translado ida e volta + ingresso do passeio
+\nFree including: round trip transfer + admission ticket"
+                            android:textColor="#1d1d1d"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/nadaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="false"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+
+                            android:layout_toEndOf="@+id/profile_image"
+                            android:fontFamily="@font/nunito_semi_bold"
+                            android:gravity="left"
+                            android:text="Jantar de Encerramento - 21:00 - 23:00"
+                            android:textColor="#1d1d1d"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/nadaaaaa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_nome"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/profile_image"
+
+                            android:gravity="left"
+                            android:text="Dinner Closing\n
+Hotel Bourboun\n
+Incluso na inscrição Congressista e Acompanhante\n
+Included in Registration Attendee and Companion"
+                            android:textColor="#1d1d1d"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/btn_voltar_mapa_congresso"
+        android:layout_width="29dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/img_seta_voltar" />
+</LinearLayout>

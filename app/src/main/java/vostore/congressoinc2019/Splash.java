@@ -39,28 +39,35 @@ public class Splash extends AppCompatActivity implements Runnable {
         handler.postDelayed(this, 3000);
 
         //Ações dos buttons
-
+/*
         btnInsta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Splash.this, Registro.class));
+                Intent intent = new Intent(Splash.this, Site.class);
+                intent.putExtra("site","https://www.instagram.com/hospital_inc/");
+                startActivity(intent);
                 finish();
             }
         });
         btnFace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Splash.this, Registro.class));
+                Intent intent = new Intent(Splash.this, Site.class);
+                intent.putExtra("site","https://www.facebook.com/InstitutoDeNeurologiaDeCuritiba/?ref=br_rs");
+                startActivity(intent);
                 finish();
             }
         });
         btnLinke.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Splash.this, Registro.class));
+                Intent intent = new Intent(Splash.this, Site.class);
+                intent.putExtra("site","https://br.linkedin.com/company/hospitalinc");
+                startActivity(intent);
                 finish();
             }
         });
+        */
     }
 
 

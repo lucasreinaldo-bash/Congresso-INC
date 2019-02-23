@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+
+    tools:context=".Palestrante">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/topo_palestrantes" />
+
+    <LinearLayout
+        android:id="@+id/linear_experts"
+        android:layout_width="wrap_content"
+        android:layout_height="162dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="175dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/experts_nacionais"
+            android:layout_width="307dp"
+            android:layout_height="72dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/btn_experts_nacionais" />
+
+        <Button
+            android:id="@+id/experts_internacionais"
+            android:layout_width="307dp"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_experts_internacionais" />
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_width="34dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:id="@+id/id_buscar_palestrante"
+        android:layout_marginTop="11dp"
+        android:visibility="gone"
+        android:background="@android:drawable/ic_menu_search" />
+
+    <Button
+        android:id="@+id/id_voltar_palestrante"
+        android:layout_width="34dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/img_voltar_palestrante" />
+
+
+    <LinearLayout
+        android:id="@+id/linear_buscar_palestrante"
+        android:layout_width="302dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_marginTop="157dp">
+
+        <EditText
+            android:id="@+id/nome_buscar"
+            android:layout_width="264dp"
+            android:layout_height="42dp"
+            android:background="@drawable/btn_buscar"
+            android:gravity="center"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/id_buscar"
+            android:layout_width="34dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:layout_marginTop="11dp"
+            android:background="@android:drawable/ic_menu_search" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="304dp"
+        android:layout_height="230dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/id_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="199dp"
+            android:visibility="visible"></android.support.v7.widget.RecyclerView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/id_recycler2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</RelativeLayout>

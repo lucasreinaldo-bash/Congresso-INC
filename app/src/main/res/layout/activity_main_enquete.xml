@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    tools:context=".Site"
+    android:orientation="vertical"
+    android:background="#ffffff">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/nadaaa"
+                android:layout_width="79dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/icon_enquete" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nunito_semi_bold"
+                android:text="Consenso sobre Aneurismas Intracranianos"
+                android:textAlignment="center"
+                android:textColor="#1d1d1d"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nunito_semi_bold"
+                android:text=" A Academia Brasileira de Neurocirurgia realizará seu Congresso em 2019, Foz do Iguaçu, e pretende realizar uma enquete de Consenso sobre Aneurismas Intracranianos junto aos colegas neurocirurgiões do Brasil e do exterior.
+
+Colabore com nosso Consenso clicando no link abaixo."
+                android:textAlignment="viewStart"
+                android:textColor="#1d1d1d"
+                android:textStyle="normal" />
+        </LinearLayout>
+        </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="PARTICIPE AQUI"
+                android:textColor="#ffffff"
+                android:id="@+id/btn_portugues_enquete"
+                android:background="@drawable/color_participe"
+                />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/nadaaa"
+                android:layout_width="79dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/icon_enquete" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nunito_semi_bold"
+                android:text="Consenso sobre Aneurismas Intracranianos"
+                android:textAlignment="center"
+                android:textColor="#1d1d1d"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nunito_semi_bold"
+                android:text="Estaremos organizando el Congreso de la Academia Brasileña de Neurocirugia entre los días 27 al 30 de marzo de 2019. En ese evento queremos presentar un 'consenso' sobre la opinión de especialistas sobre aneurismas cerebrales.
+
+Apreciamos mucho su participación."
+                android:textAlignment="center"
+                android:textColor="#1d1d1d"
+                android:textStyle="normal" />
+        </LinearLayout>
+        </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="PARTICIPAR AQUÍ"
+                android:textColor="#ffffff"
+                android:id="@+id/btn_espanhol_enquete"
+                android:background="@drawable/color_participe"
+                />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/nadaaa"
+                android:layout_width="79dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/icon_enquete" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nunito_semi_bold"
+                android:text="Consensus of Intracranial Aneurysms"
+                android:textAlignment="center"
+                android:textColor="#1d1d1d"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nunito_semi_bold"
+                android:text=" We will be hosting the Congress of the Brazilian Academy of Neurosurgery in Foz De Iguazú on March 27-30th, 2019. We are attempting to present at that meeting a 'consensus of specialist's opinions regarding several neurosurgical topics. We would like to invite you to participate on the topic of cerebral aneurysms.
+
+We kindly appreciate your participation."
+                android:textAlignment="center"
+                android:textColor="#1d1d1d"
+                android:textStyle="normal" />
+        </LinearLayout>
+        </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_ingles_enquete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="TO PARTICIPATE"
+                android:textColor="#ffffff"
+                android:background="@drawable/color_participe"
+                />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
+</ScrollView>
+
+</LinearLayout>

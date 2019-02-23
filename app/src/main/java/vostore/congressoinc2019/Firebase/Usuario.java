@@ -5,6 +5,7 @@ public class Usuario {
     private String nome;
     private String tipoUsuario;
     private String email;
+    private String situacaoCadastro;
     private String senha;
     private String contrasenha;
     private String fotoPerfilChat;
@@ -17,13 +18,22 @@ public class Usuario {
 
     }
 
-    public Usuario(String nome,String tipoUsuario, String email, String senha, String contrasenha, String fotoPerfilChat) {
+    public Usuario(String nome,String situacaoCadastro,String tipoUsuario, String email, String senha, String contrasenha, String fotoPerfilChat) {
         this.nome = nome;
         this.email = email;
         this.tipoUsuario = tipoUsuario;
         this.senha = senha;
+        this.situacaoCadastro = situacaoCadastro;
         this.contrasenha = contrasenha;
         this.fotoPerfilChat = fotoPerfilChat;
+    }
+
+    public String getSituacaoCadastro() {
+        return situacaoCadastro;
+    }
+
+    public void setSituacaoCadastro(String situacaoCadastro) {
+        this.situacaoCadastro = situacaoCadastro;
     }
 
     public String getTipoUsuario() {

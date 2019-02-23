@@ -6,7 +6,9 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -18,49 +20,98 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 
-import vostore.congressoinc2019.Firebase.Palestrante;
+import java.util.ArrayList;
+import java.util.List;
+
+
+import vostore.congressoinc2019.Firebase.ConfiguracaoFirebase;
 import vostore.congressoinc2019.Firebase.Usuario;
 
 
 public class Registro extends AppCompatActivity {
+
+    private Button btnInsta, btnFace,btnLinke,btnVerQr,btnConcluirInscricao;
     private FirebaseDatabase database;
     private FirebaseAuth mAuth;
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
     private Button btnRegistrar, btnPalestrante,btnParticipante;
-    private EditText txtNome,txtEmail,txtNomeProfissional,txtFormacao,txtNacionalidade,txtInformacaoComplementar;
+    private EditText txtNome,txtEmail,txtCpf,txtNomeProfissional,txtFormacao,txtNacionalidade,txtInformacaoComplementar;
     private EditText txtSenha;
     private LinearLayout linear_curriculo;
-    private String tipoDoUsuario;
-    
+    private String tipoDoUsuario,cpfValido;
+    private DatabaseReference reference, referenciaCPF;
+    private DatabaseReference dref = FirebaseDatabase.getInstance().getReference().child("CPF");
+
+    private List<CPF> listCPF = new ArrayList<CPF>();
+    private ArrayAdapter<CPF> arrayAdapter ;
+    private String situacaoCadastro = "false";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        FirebaseApp.initializeApp(this);
+       inicializarFirebase();
+        verificarUsuarioLogado();
         //verificarUsuarioLogado();
         txtNome = (EditText) findViewById(R.id.nome_id);
         txtEmail = (EditText) findViewById(R.id.email_id);
-        txtNomeProfissional = (EditText) findViewById(R.id.nome_profissional_id);
-        txtFormacao = (EditText) findViewById(R.id.formacao_id);
-        txtNacionalidade = (EditText) findViewById(R.id.nacionalidade_id);
-        txtInformacaoComplementar = (EditText) findViewById(R.id.complementares_id);
+
+
+        //Redes Sociais
+        btnInsta = findViewById(R.id.btn_insta);
+        btnFace = findViewById(R.id.btn_face);
+        btnLinke = findViewById(R.id.btn_in);
+
        // txtSenha = (EditText) findViewById(R.id.rg_senha);
         //txtSenhaRepetida = (EditText) findViewById(R.id.rg_contrasenha);
         btnRegistrar = (Button) findViewById(R.id.btn_login);
-        btnPalestrante = findViewById(R.id.id_palestrante);
-        btnParticipante = findViewById(R.id.id_participante);
-        linear_curriculo = findViewById(R.id.linear_curriculo_id);
 
 
 
 
+
+
+
+
+        btnInsta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Registro.this, Site.class);
+                intent.putExtra("site","https://www.instagram.com/hospital_inc/");
+                startActivity(intent);
+                finish();
+            }
+        });
+        btnFace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Registro.this, Site.class);
+                intent.putExtra("site","https://www.facebook.com/InstitutoDeNeurologiaDeCuritiba/?ref=br_rs");
+                startActivity(intent);
+                finish();
+            }
+        });
+        btnLinke.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Registro.this, Site.class);
+                intent.putExtra("site","https://br.linkedin.com/company/hospitalinc");
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
 
@@ -68,38 +119,19 @@ public class Registro extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
 
+
+
+        //Carregando Banco de Dados
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+
+
+
         // Adicionando evento ao click do botão
 
 
-        btnPalestrante.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnPalestrante.setBackgroundResource(R.drawable.palestrante2);
-                btnParticipante.setBackgroundResource(R.drawable.participante);
-                Usuario usuario = new Usuario();
-                usuario.setTipoUsuario("Palestrante");
 
-                linear_curriculo.setVisibility(View.VISIBLE);
-
-
-
-            }
-        });
-        btnParticipante.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnParticipante.setBackgroundResource(R.drawable.participante2);
-                btnPalestrante.setBackgroundResource(R.drawable.palestrante);
-                Usuario usuario = new Usuario();
-                usuario.setTipoUsuario("Participante");
-
-                linear_curriculo.setVisibility(View.GONE);
-                txtNomeProfissional.setText("");
-                txtFormacao.setText("");
-                txtNacionalidade.setText("");
-                txtInformacaoComplementar.setText("");
-            }
-        });
 
 
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
@@ -108,59 +140,40 @@ public class Registro extends AppCompatActivity {
                 final String email = txtEmail.getText().toString();
                 final String nomecompleto = txtNome.getText().toString();
                 final String nome = txtNome.getText().toString();
+                final String cpf = "04486557565";
                 final String senhausuario = "000000";
-
-
 
                 if(isValidEmail(email) && validarContraseña() && validarNombre(nome)){
                     final String senha = "000000";
+                    final Boolean status = false;
                     mAuth.createUserWithEmailAndPassword(email, senha)
                             .addOnCompleteListener(Registro.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
+
+
                                         // Sign in success, update UI with the signed-in user's information
                                         Toast.makeText(Registro.this, "Registro Confirmado. Seja-bem vindo!", Toast.LENGTH_SHORT).show();
                                         Usuario usuario = new Usuario();
                                         usuario.setEmail(email);
                                         usuario.setNome(nome);
-
-
-                                        if (txtNomeProfissional.length() > 0) {
-                                            usuario.setTipoUsuario("Palestrante");
-
-                                            Palestrante palestrante = new Palestrante();
-                                            palestrante.setNomeProfissional(txtNomeProfissional.getText().toString());
-                                            palestrante.setNacionalidade(txtNacionalidade.getText().toString());
-                                            palestrante.setFormacao(txtFormacao.getText().toString());
-                                            palestrante.setInformacoesComplementares(txtInformacaoComplementar.getText().toString());
-
-                                            FirebaseUser currentUser = mAuth.getCurrentUser();
-                                            DatabaseReference reference = database.getReference("Palestrantes/"+txtNomeProfissional.getText().toString());
-                                            reference.setValue(palestrante);
-                                        }
-                                        else{
-                                            usuario.setTipoUsuario("Participante");
-                                        }
-
-                                        tipoDoUsuario = usuario.getTipoUsuario();
-                                       // Toast.makeText(Registro.this, tipoDoUsuario, Toast.LENGTH_SHORT).show();
-
+                                        usuario.setSituacaoCadastro(situacaoCadastro);
                                         FirebaseUser currentUser = mAuth.getCurrentUser();
                                         DatabaseReference reference = database.getReference("Usuario/"+currentUser.getUid());
                                         reference.setValue(usuario);
-                                        Intent intent = new Intent(Registro.this, MainActivity.class);
+                                        Intent intent = new Intent(Registro.this, Menu.class);
                                         String nomeUsuario = usuario.getNome();
                                         String emailUsuario = usuario.getEmail();
                                         intent.putExtra("nomeUsuario",nomeUsuario);
                                         intent.putExtra("emailUsuario",emailUsuario);
-                                        intent.putExtra("tipoDoUsuario",tipoDoUsuario);
                                         startActivity(intent);
                                         finish();
 
                                     } else {
                                         // If sign in fails, display a message to the user.
                                         Toast.makeText(Registro.this, "Erro ao fazer o registro", Toast.LENGTH_SHORT).show();
+                                        Log.i("CreateUser", "Erro ao cadastrar usuário! ", task.getException());
                                     }
                                 }
                             });
@@ -172,7 +185,14 @@ public class Registro extends AppCompatActivity {
         });
 
     }
-
+    private void verificarUsuarioLogado(){
+        mAuth = ConfiguracaoFirebase.getFirebaseAutenticacao();
+        if(mAuth.getCurrentUser()!= null ){
+            Intent intent = new Intent(Registro.this, Menu.class);
+            startActivity(intent);
+            finish();
+        }
+    }
     //método para validar e-mail
     private boolean isValidEmail(CharSequence target) {
         return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
@@ -203,6 +223,13 @@ public class Registro extends AppCompatActivity {
         finish();
 
 
+    }
+
+
+    private void inicializarFirebase(){
+        FirebaseApp.initializeApp(this);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference();
     }
 
 }

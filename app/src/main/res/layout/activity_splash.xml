@@ -7,15 +7,34 @@
     android:background="#ffffff"
     tools:context=".Splash">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="86dp"
-        android:layout_height="45dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="101dp"
-        app:srcCompat="@drawable/patrocinio1" />
+        android:layout_marginBottom="93dp">
 
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="86dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_marginEnd="50dp"
+            app:srcCompat="@drawable/logo_abnc" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="86dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="103dp"
+            android:layout_marginStart="50dp"
+            app:srcCompat="@drawable/patrocinio1" />
+
+
+    </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,6 +89,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:layout_marginStart="74dp"
+            android:clickable="false"
             android:fontFamily="@font/nunito_sans_extralight"
             android:text="SIGA-NOS!"
             android:textColor="#ffffff"
