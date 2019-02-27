@@ -7,13 +7,14 @@
     android:background="#ffffff"
 
     tools:context=".Palestrante">
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="135dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/topo_palestrantes" />
+        android:background="@drawable/img_palestrantes" />
 
     <LinearLayout
         android:id="@+id/linear_experts"
@@ -26,7 +27,7 @@
 
         <Button
             android:id="@+id/experts_nacionais"
-            android:layout_width="307dp"
+            android:layout_width="224dp"
             android:layout_height="72dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
@@ -35,8 +36,8 @@
 
         <Button
             android:id="@+id/experts_internacionais"
-            android:layout_width="307dp"
-            android:layout_height="70dp"
+            android:layout_width="224dp"
+            android:layout_height="72dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
@@ -56,16 +57,6 @@
         android:layout_marginTop="11dp"
         android:visibility="gone"
         android:background="@android:drawable/ic_menu_search" />
-
-    <Button
-        android:id="@+id/id_voltar_palestrante"
-        android:layout_width="34dp"
-        android:layout_height="32dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/img_voltar_palestrante" />
 
 
     <LinearLayout
@@ -96,25 +87,36 @@
             android:background="@android:drawable/ic_menu_search" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="304dp"
-        android:layout_height="230dp"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:orientation="vertical">
+        android:layout_alignParentStart="true"
+        android:background="@drawable/img_bottom_navigation"
+        android:visibility="visible">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/id_recycler"
-            android:layout_width="match_parent"
-            android:layout_height="199dp"
-            android:visibility="visible"></android.support.v7.widget.RecyclerView>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/id_recycler2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"></android.support.v7.widget.RecyclerView>
+        <Button
+            android:id="@+id/btn_home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="91dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_home" />
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/btn_voltar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="79dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_voltar" />
 
+    </RelativeLayout>
 </RelativeLayout>

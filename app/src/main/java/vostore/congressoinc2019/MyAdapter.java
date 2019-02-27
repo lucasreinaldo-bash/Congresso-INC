@@ -55,13 +55,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     class MyViewHolder extends RecyclerView.ViewHolder
     {
         TextView name,nacionalidade;
-        AvatarImageView profilePic;
+        ImageView profilePic;
         Button btn;
         public MyViewHolder(View itemView) {
             super(itemView);
             name = (TextView) itemView.findViewById(R.id.profile_nome);
             nacionalidade = (TextView) itemView.findViewById(R.id.profile_pais);
-            profilePic =(AvatarImageView) itemView.findViewById(R.id.profile_image);
+            profilePic = itemView.findViewById(R.id.profile_image);
            // btn = (Button) itemView.findViewById(R.id.checkDetails);
         }
 

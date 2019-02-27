@@ -4,5 +4,5 @@
     <!-- normal-->
     <item android:state_pressed="true" android:drawable="@drawable/img_palestrante2" />
     <item android:state_focused="true" android:drawable="@drawable/img_palestrante2" />
-    <item android:drawable="@drawable/img_palestrante" />
+    <item android:drawable="@drawable/img_palestrante_azulescuro" />
 </selector>

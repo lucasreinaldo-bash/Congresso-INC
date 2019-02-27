@@ -115,23 +115,12 @@ public class MainActivity extends AppCompatActivity  implements  Runnable {
                         Toast.makeText(MainActivity.this, "O CPF informado não se encontra na lista de inscrições confirmadas.", Toast.LENGTH_SHORT).show();
                     }
                     else{
-                        nomeUsuario = dataSnapshot.child("nome").getValue().toString();
-                        emailUsuario = dataSnapshot.child("email").getValue().toString();
-                        cpfUsuario = dataSnapshot.child("CPF").getValue().toString();
 
 
-                        informacoesParaQr = "Nome Completo:" + nomeUsuario + "\n" + "E-mail: " + emailUsuario + "\n" + "CPF: " + cpfUsuario;
 
-
-                        try {
-                            BitMatrix bitMatrix = multi.encode(informacoesParaQr, BarcodeFormat.QR_CODE, 300, 300);
-                            BarcodeEncoder encoder = new BarcodeEncoder();
-                            Bitmap bitmap = encoder.createBitmap(bitMatrix);
-                            qrCode.setImageBitmap(bitmap);
-                            // Toast.makeText(MainActivity.this, "Deu certo!", Toast.LENGTH_SHORT).show();
-                        } catch (WriterException e) {
-                            e.printStackTrace();
-                        }
+                        Intent intent = new Intent(MainActivity.this, QRConfirmado.class);
+                        startActivity(intent);
+                        finish();
                     }
                 }
             }

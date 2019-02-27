@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.github.abdularis.civ.AvatarImageView;
@@ -51,13 +52,13 @@ public class MyAdapterNacionais extends RecyclerView.Adapter<MyAdapterNacionais.
     class MyViewHolder extends RecyclerView.ViewHolder
     {
         TextView name,nacionalidade;
-        AvatarImageView profilePic;
+        ImageView profilePic;
         Button btn;
         public MyViewHolder(View itemView) {
             super(itemView);
             name = (TextView) itemView.findViewById(R.id.profile_nome);
             nacionalidade = (TextView) itemView.findViewById(R.id.profile_pais);
-            profilePic =(AvatarImageView) itemView.findViewById(R.id.profile_image);
+            profilePic = itemView.findViewById(R.id.profile_image);
            // btn = (Button) itemView.findViewById(R.id.checkDetails);
         }
 

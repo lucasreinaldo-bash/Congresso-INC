@@ -63,8 +63,8 @@ public class Registro extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
        inicializarFirebase();
-        verificarUsuarioLogado();
         //verificarUsuarioLogado();
+      //verificarUsuarioLogado();
         txtNome = (EditText) findViewById(R.id.nome_id);
         txtEmail = (EditText) findViewById(R.id.email_id);
 

@@ -36,7 +36,7 @@ public class QRConfirmado extends AppCompatActivity  implements  Runnable {
     private String emailUsuario;
     private String cpfUsuario;
     private String informacoesParaQr;
-    private Button gerar;
+    private Button gerar,btn_home,btn_voltar;
     private FirebaseDatabase database;
     private FirebaseAuth mAuth;
     private FirebaseDatabase firebaseDatabase;
@@ -52,6 +52,8 @@ public class QRConfirmado extends AppCompatActivity  implements  Runnable {
         inicializarFirebase();
 
         qrCode = findViewById(R.id.id_qr_confirmado);
+        btn_home = findViewById(R.id.btn_home);
+        btn_voltar = findViewById(R.id.btn_voltar);
         // Instaciando o servidor
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
@@ -61,7 +63,19 @@ public class QRConfirmado extends AppCompatActivity  implements  Runnable {
 
 
 
-
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(QRConfirmado.this, Menu.class));
+                finish();
+            }
+        });
+        btn_voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         Handler handler = new Handler();
         handler.postDelayed(this, 100000);

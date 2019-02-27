@@ -78,6 +78,9 @@
             android:name=".QRConfirmado"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
+            android:name=".QRMenu"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
             android:name=".TelaCodigoBarras"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
@@ -87,12 +90,25 @@
             android:name=".ExplorarFoz"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
+            android:name=".Tela27"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />     <activity
+            android:name=".TelaTrabalhos"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
             android:name=".MapaCongresso"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" /> <activity
             android:name=".PatrocinadoresExpositores"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".ProgramaSocial"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".Tour"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".PalestranteNacional"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />  <activity
+            android:name=".PalestranteInternacional"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />   <activity
             android:name=".MainEnquete"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" /> <activity

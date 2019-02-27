@@ -2,7 +2,7 @@
     <!-- pressionado -->
     <!-- com foco -->
     <!-- normal-->
-    <item android:state_pressed="true" android:drawable="@drawable/img_data_28_2" />
-    <item android:state_focused="true" android:drawable="@drawable/img_data_28_2" />
-    <item android:drawable="@drawable/img_data_28" />
+    <item android:state_pressed="true" android:drawable="@drawable/img_data_28_1" />
+    <item android:state_focused="true" android:drawable="@drawable/img_data_28_1" />
+    <item android:drawable="@drawable/img_data_28_2" />
 </selector>

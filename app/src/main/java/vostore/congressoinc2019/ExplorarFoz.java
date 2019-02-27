@@ -35,12 +35,13 @@ public class ExplorarFoz extends AppCompatActivity {
     private RecyclerView mResultList;
     private DatabaseReference reference;
     RecyclerView recyclerView;
+    private Button btn_voltar,btn_home;
     final int ITEM_LOAD_COUNT = 21;
     int total_item = 0, last_visible_item;
 
-    ArrayList<ExpertsNacionais> list;
-    ArrayList<ExpertsNacionais>list2;
-    MyAdapterNacionais adapter;
+    ArrayList<TourClass> list;
+    ArrayList<TourClass>list2;
+    MyAdapterTour adapter;
     MyAdapterNacionais adapter2;
     boolean isLoading = false, isMaxData = false;
 
@@ -53,30 +54,43 @@ public class ExplorarFoz extends AppCompatActivity {
         setContentView(R.layout.activity_explore_foz);
 
         recyclerView = (RecyclerView) findViewById(R.id.id_recycler3);
+        btn_voltar =  findViewById(R.id.btn_voltar);
+        btn_home =  findViewById(R.id.btn_home);
 
         recyclerView.setLayoutManager( new LinearLayoutManager(this));
 
         //Fazendo cast dos botões Experts
 
-        btnVoltar = findViewById(R.id.btn_voltar_mapa_congresso);
 
 
 
 
 
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+        btn_voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
 
-        reference = FirebaseDatabase.getInstance().getReference().child("Passeio");
+        reference = FirebaseDatabase.getInstance().getReference().child("ExploreFoz");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                list = new ArrayList<ExpertsNacionais>();
+                list = new ArrayList<TourClass>();
                 for(DataSnapshot dataSnapshot1: dataSnapshot.getChildren())
                 {
-                    ExpertsNacionais p = dataSnapshot1.getValue(ExpertsNacionais.class);
+                    TourClass p = dataSnapshot1.getValue(TourClass.class);
                     list.add(p);
                 }
-                adapter = new MyAdapterNacionais(ExplorarFoz.this,list);
+                adapter = new MyAdapterTour(ExplorarFoz.this,list);
                 recyclerView.setAdapter(adapter);
             }
 
@@ -88,12 +102,7 @@ public class ExplorarFoz extends AppCompatActivity {
 
 
 
-        btnVoltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            onBackPressed();
-            }
-        });
+
     }
 
 

@@ -29,7 +29,7 @@ import vostore.congressoinc2019.Firebase.Usuario;
 
 public class Menu extends AppCompatActivity {
 
-    private Button btn_cientifico,btn_patrocinadores_expositores, btn_palestrante, btnVerQr, btnConcluirInscricao, btn_comochegar, btn_programa_social, btn_mapa_congresso, btn_enquete, btn_explorar_foz;
+    private Button btn_cientifico,btn_voltar,btn_patrocinadores_expositores, btn_palestrante, btnVerQr, btnConcluirInscricao, btn_comochegar, btn_programa_social, btn_mapa_congresso, btn_enquete, btn_explorar_foz;
     private FirebaseDatabase database;
     private FirebaseAuth mAuth;
     private DatabaseReference databaseReference;
@@ -55,6 +55,7 @@ public class Menu extends AppCompatActivity {
         btn_enquete = findViewById(R.id.btn_enquete);
         btn_patrocinadores_expositores = findViewById(R.id.btn_patrocinadores_expositores);
         btn_explorar_foz = findViewById(R.id.btn_explorar_foz);
+        btn_voltar = findViewById(R.id.btn_voltar);
 
 
         //Firebase
@@ -62,7 +63,7 @@ public class Menu extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         databaseReference = database.getReference("Usuario/" + currentUser.getUid());
-        isAccountValid();
+
 
 
 
@@ -73,6 +74,14 @@ public class Menu extends AppCompatActivity {
 
 
 
+        btn_cientifico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Menu.this, ProgramaCientifico.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         btn_cientifico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,18 +106,11 @@ public class Menu extends AppCompatActivity {
                 finish();
             }
         });
-        btnVerQr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Menu.this, QRConfirmado.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+
         btnConcluirInscricao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Menu.this, MainActivity.class);
+                Intent intent = new Intent(Menu.this, QRMenu.class);
                 startActivity(intent);
                 finish();
             }
@@ -154,34 +156,5 @@ public class Menu extends AppCompatActivity {
 
     }
 
-    private void isAccountValid() {
-        String uid = mAuth.getCurrentUser().getUid();
-        DatabaseReference databaseReference = ConfiguracaoFirebase.getFirebase().child("Usuario").child(uid);
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.child("situacaoCadastro").getValue() == null)
-                    Toast.makeText(Menu.this, "Null", Toast.LENGTH_SHORT).show();
-                else {
-                    Boolean accountChecked = Boolean.parseBoolean(dataSnapshot.child("situacaoCadastro").getValue().toString());
-                    if (!accountChecked) {
-                        btnVerQr.setVisibility(View.GONE);
-                        btnConcluirInscricao.setVisibility(View.VISIBLE);
-                    } else {
-                        btnConcluirInscricao.setVisibility(View.GONE);
-                        btnVerQr.setVisibility(View.VISIBLE);
 
-
-
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-    }
 }

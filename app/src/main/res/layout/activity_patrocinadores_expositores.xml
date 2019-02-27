@@ -20,143 +20,106 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/id_experte_nacionais"
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
+            <LinearLayout
+                android:layout_width="186dp"
+                android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="10dp"
-                app:srcCompat="@drawable/btn_expositores" />
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/nadaaa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/patrocinador_inc" />  <ImageView
+                    android:id="@+id/nadaaa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/img_medcosta" />
+
+
+            </LinearLayout> <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/id_qr2"
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                app:srcCompat="@drawable/btn_patrocinadores" />
+                android:id="@+id/nadaaa"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/img_provascular" />  <ImageView
+                android:id="@+id/nadaaa"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/img_hemocat" />
 
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                app:cardBackgroundColor="@android:color/white"
-                app:cardCornerRadius="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-
-                    <ImageView
-                        android:id="@+id/nadaaa"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/patrocinador_inc" />
-
-
-                    <Button
-                        android:id="@+id/btn_site_inc"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/color_participe"
-                        android:text="Visitar Site"
-                        android:textColor="#ffffff" />
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                app:cardBackgroundColor="@android:color/white"
-                app:cardCornerRadius="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-
-                    <ImageView
-                        android:id="@+id/nadaaa"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/logo_abnc" />
-
-
-                    <Button
-                        android:id="@+id/btn_site_abnc"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/color_participe"
-                        android:text="Visitar Site"
-                        android:textColor="#ffffff" />
-                </LinearLayout>
-            </android.support.v7.widget.CardView>   <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                app:cardBackgroundColor="@android:color/white"
-                app:cardCornerRadius="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-
-                    <ImageView
-                        android:id="@+id/nadaaa"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/patrocinador_rd" />
-
-
-                    <Button
-                        android:id="@+id/btn_site_rd"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/color_participe"
-                        android:text="Visitar Site"
-                        android:textColor="#ffffff" />
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+        </LinearLayout>
+        </LinearLayout>
 
 
         </LinearLayout>
     </ScrollView>
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="135dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/topo_expositores" />
-
-
-    <ImageView
-        android:id="@+id/id_voltar_palestrante"
-        android:layout_width="34dp"
-        android:layout_height="32dp"
+        android:background="@drawable/img_parceiros" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageView4"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="-5dp"
-        app:srcCompat="@drawable/img_voltar_palestrante" />
+        android:background="@drawable/img_bottom_navigation"
+        android:visibility="visible">
+
+
+        <Button
+            android:id="@+id/btn_home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="91dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_home" />
+
+        <Button
+            android:id="@+id/btn_voltar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="79dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_voltar" />
+
+    </RelativeLayout>
+
 </RelativeLayout>

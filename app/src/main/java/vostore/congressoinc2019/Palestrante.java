@@ -46,103 +46,58 @@ public class Palestrante extends AppCompatActivity {
 
     String last_node="",last_key="";
     LinearLayoutManager layoutManager;
+    Button btn_home,btn_voltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_palestrante);
 
-        recyclerView = (RecyclerView) findViewById(R.id.id_recycler);
-        recyclerView2 = (RecyclerView) findViewById(R.id.id_recycler2);
-        recyclerView.setLayoutManager( new LinearLayoutManager(this));
-        recyclerView2.setLayoutManager( new LinearLayoutManager(this));
 
         //Fazendo cast dos botões Experts
 
         expertsInternacionais = findViewById(R.id.experts_internacionais);
         expertsNacionais = findViewById(R.id.experts_nacionais);
-        btnVoltar = findViewById(R.id.id_voltar_palestrante);
 
-
-
-
-
-
-
-        reference = FirebaseDatabase.getInstance().getReference().child("PalestrantesInternacionais");
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                list = new ArrayList<Experts>();
-                for(DataSnapshot dataSnapshot1: dataSnapshot.getChildren())
-                {
-                    Experts p = dataSnapshot1.getValue(Experts.class);
-                    list.add(p);
-                }
-                adapter = new MyAdapter(Palestrante.this,list);
-                recyclerView.setAdapter(adapter);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(Palestrante.this, "Opsss.... Something is wrong", Toast.LENGTH_SHORT).show();
-            }
-        });
-        reference2 = FirebaseDatabase.getInstance().getReference().child("PalestrantesNacionais");
-        reference2.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                list2 = new ArrayList<ExpertsNacionais>();
-                for(DataSnapshot dataSnapshot1: dataSnapshot.getChildren())
-                {
-                    ExpertsNacionais p = dataSnapshot1.getValue(ExpertsNacionais.class);
-                    list2.add(p);
-                }
-
-                adapter2 = new MyAdapterNacionais(Palestrante.this,list2);
-                recyclerView2.setAdapter(adapter2);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(Palestrante.this, "Opsss.... Something is wrong", Toast.LENGTH_SHORT).show();
-            }
-        });
-
+        btn_home = findViewById(R.id.btn_home);
+        btn_voltar = findViewById(R.id.btn_voltar);
 
 
         expertsInternacionais.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (recyclerView.getVisibility() == View.GONE){
-                    recyclerView.setVisibility(View.VISIBLE);
-                    recyclerView2.setVisibility(View.GONE);
-                }
-                else{
-                    recyclerView.setVisibility(View.GONE);
-                    recyclerView2.setVisibility(View.GONE);
-                }
+                Intent intent = new Intent(Palestrante.this, PalestranteInternacional.class);
+                startActivity(intent);
+                finish();
             }
         });
         expertsNacionais.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (recyclerView2.getVisibility() == View.GONE){
-                    recyclerView2.setVisibility(View.VISIBLE);
-                    recyclerView.setVisibility(View.GONE);
-                }
-                else{
-                    recyclerView2.setVisibility(View.GONE);
-                    recyclerView.setVisibility(View.GONE);
-                }
+                Intent intent = new Intent(Palestrante.this, PalestranteNacional.class);
+                startActivity(intent);
+                finish();
             }
         });
-        btnVoltar.setOnClickListener(new View.OnClickListener() {
+        btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            onBackPressed();
+
+                Intent intent = new Intent(Palestrante.this, Menu.class);
+                startActivity(intent);
+                finish();
             }
         });
+        btn_voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(Palestrante.this, Menu.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 
 

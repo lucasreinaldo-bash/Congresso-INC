@@ -20,7 +20,7 @@ public class MapaCongresso extends AppCompatActivity {
     ImageView top;
     Animation fromlogo;
     String nomeDocumento;
-    Button btnVoltar;
+    Button btn_home,btn_voltar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,12 +30,19 @@ public class MapaCongresso extends AppCompatActivity {
 
 
         pdfView = findViewById(R.id.pdfView);
-        btnVoltar = findViewById(R.id.btn_voltar_mapa_congresso);
+        btn_voltar = findViewById(R.id.btn_voltar);
+        btn_home = findViewById(R.id.btn_home);
 
         pdfView.fromAsset("documento12.pdf").load();
 
 
-        btnVoltar.setOnClickListener(new View.OnClickListener() {
+        btn_voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+        btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();

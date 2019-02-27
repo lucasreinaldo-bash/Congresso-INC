@@ -31,6 +31,7 @@ import android.widget.ImageView;
 public class Maps extends AppCompatActivity {
 
 
+    private Button btn_home,btn_voltar;
     private LocationManager lm;
     private Location location;
     private double longitude = -25.5598719;
@@ -49,6 +50,22 @@ public class Maps extends AppCompatActivity {
         // bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#FF8F00")));
         Bundle extras = getIntent().getExtras();
         mWebView = (WebView) findViewById(R.id.site);
+        btn_home =  findViewById(R.id.btn_home);
+        btn_voltar =  findViewById(R.id.btn_voltar);
+
+
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+        btn_voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
         //Recebendo informação de outra Activity
         if (null != getIntent()) {
             /** Pegamos o VALOR_1**/

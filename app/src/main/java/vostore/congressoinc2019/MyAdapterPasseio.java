@@ -57,7 +57,7 @@ public class MyAdapterPasseio extends RecyclerView.Adapter<MyAdapterPasseio.MyVi
         public MyViewHolder(View itemView) {
             super(itemView);
             name = (TextView) itemView.findViewById(R.id.profile_nome);
-            endereco = (TextView) itemView.findViewById(R.id.profile_endereco);
+            endereco = (TextView) itemView.findViewById(R.id.profile_pais);
             telefone = (TextView) itemView.findViewById(R.id.profile_telefone);
             profilePic =(AvatarImageView) itemView.findViewById(R.id.profile_image);
            // btn = (Button) itemView.findViewById(R.id.checkDetails);

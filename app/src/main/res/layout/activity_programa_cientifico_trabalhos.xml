@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+
+    tools:context=".Registro">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/topo_programa_cientifico" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="153dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/nunito_semi_bold"
+        android:text="TRABALHOS"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="393dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="53dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/linear_trabalhos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/btn_trabalhos_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="78dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/img_button"
+                    android:padding="10sp"
+                    android:text="TRABALHOS APROVADOS - APRESENTAÇÃO ORAL"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/btn_trabalhos_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="78dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/img_button"
+                    android:padding="10sp"
+                    android:text="TRABALHOS APROVADOS - E-PÔSTERES"
+
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/btn_trabalhos_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="78dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/img_button"
+                    android:padding="10sp"
+                    android:text="TOP 30 E-PÔSTERES"
+
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/btn_trabalhos_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="78dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/img_button"
+                    android:padding="10sp"
+                    android:text="NORMAS PÓS ACEITE"
+
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/btn_trabalhos_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="78dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/img_button"
+                    android:padding="10sp"
+                    android:text="HORÁRIOS DAS APRESENTAÇÕES"
+
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/img_bottom_navigation"
+        android:visibility="visible">
+
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="91dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_home" />
+
+        <Button
+            android:id="@+id/btn_voltar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="79dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_voltar" />
+
+    </RelativeLayout>
+</RelativeLayout>
